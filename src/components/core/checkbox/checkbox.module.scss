@@ -1,0 +1,41 @@
+@import '../../../assets/css/variable';
+@import '../../../assets/css/mixin';
+
+.checkbox {
+  font-size: 16px;
+  color: #EAF0ED;
+  cursor: pointer;
+  position: relative;
+  input {
+    opacity: 0;
+  }
+  .checkmark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #EAF0ED;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    &:after {
+      display: none;
+    }
+  }
+  input:checked + .checkmark {
+    background-color: #70AF7E;
+  }
+  input:checked + .checkmark:after {
+    display: block;
+    content: '';
+    width: 7px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 5px;
+    top: 2px;
+  }
+}

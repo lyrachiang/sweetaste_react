@@ -1,0 +1,41 @@
+@import '../../../assets/css/variable';
+@import '../../../assets/css/mixin';
+
+.payment_form {
+  padding: 30px 40px 0 40px;
+  background-color: #3F5D45;
+  > div:nth-child(2) {
+    .multiple {
+      display: flex;
+      align-items: flex-end;
+      > fieldset {
+        flex: 0 1 50%;
+      }
+    }
+  }
+  > div:nth-child(3) {
+    padding-top: 5px;
+    margin: 0 -40px;
+  }
+  .title_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    h2 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 36px;
+      color: #EAF0ED;
+    }
+  }
+}
+
+@include rwd-mobile(sm) {  
+  .payment_form {
+    padding: 30px 30px 0 30px;
+    > div:nth-child(3) {
+      margin: 0 -30px;
+    }
+  }
+}

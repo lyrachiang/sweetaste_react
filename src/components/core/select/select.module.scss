@@ -1,0 +1,21 @@
+@import '../../../assets/css/variable';
+@import '../../../assets/css/mixin';
+
+.select_input {
+  background-color: #EAF0ED;
+  &:focus-visible {
+    outline: none;
+  }
+  > div {
+    padding: 5px 0;
+    border: none;
+    background-color: #EAF0ED;
+    &:hover {
+      border-color: unset;
+      box-shadow: unset;
+    }
+    > div > div {
+      color: #3F5D45;
+    }
+  }
+}

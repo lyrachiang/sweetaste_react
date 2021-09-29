@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import Layout from './components/layout';
+
+import Home from './views/home';
+import Product from './views/product';
+import Favorite from './views/favorite';
+import Login from './views/login';
+import Cart from './views/cart';
+import Checkout from './views/checkout';
+import Finish from './views/finish';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Layout>
+        <Route path="/" exact component={Home} />
+        <Route path="/product" component={Product} />
+        <Route path="/favorite" component={Favorite} />
+        <Route path="/login" component={Login} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/checkout" component={Checkout} />
+        <Route path="/finish" component={Finish} />
+      </Layout>
+    </Router>
   );
 }
 

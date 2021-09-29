@@ -1,0 +1,46 @@
+@import '../../assets/css/variable';
+@import '../../assets/css/mixin';
+
+.content_container {
+  padding: 60px 0;
+}
+
+.favorite_block {
+  @include card(10, 33.33%);
+  flex-wrap: wrap;
+  padding-top: 20px;
+  > div {
+    margin-bottom: 20px;
+  }
+}
+
+.message_block {
+  padding: 30px 0;
+  text-align: center;
+  p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #3F5D45;
+  }
+  button {
+    margin-top: 20px;
+  }
+}
+
+@include rwd-mobile(sm) {
+  .content_container {
+    padding: 30px 0
+  }
+
+  .favorite_block {
+    @include card(10, 50%);
+  }
+}
+
+@include rwd-mobile(xs) {
+  .favorite_block {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../assets/css/variable';
+@import '../../assets/css/mixin';
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@include rwd-mobile(sm) {
+  .container {
+    padding: 0 30px;
+  }
+}

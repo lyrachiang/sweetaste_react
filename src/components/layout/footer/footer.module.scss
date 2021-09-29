@@ -1,0 +1,134 @@
+@import '../../../assets/css/variable';
+@import '../../../assets/css/mixin';
+
+.footer_container {
+  max-width: 860px;
+}
+
+.mail_container {
+  background-color: #3F5D45;
+  padding: 30px 0;
+}
+
+.mail_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+      margin-right: 20px;
+    }
+    h4 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 29px;
+      color: #EAF0ED;
+    }
+  }
+}
+
+.info_container {
+  background-color: #EAF0ED;
+  padding: 30px 0;
+}
+
+.contact_info {
+  display: flex;
+  justify-content: space-between;
+  .contact_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > div {
+      img {
+        width: 171px;
+      }
+    }
+    .contact_list {
+      li {
+        font-size: 16px;
+        line-height: 24px;
+        color: #3F5D45;
+        &:last-child {
+          padding-top: 5px;
+        }
+        a {
+          display: block;
+          color: #3F5D45;
+          padding: 5px 0;
+          &:hover {
+            color: lighten(#3F5D45, 20);
+          }
+        }
+      }
+    }
+  }
+  .img_slogan {
+    img {
+      width: 59px;
+    }
+  }
+}
+
+.social_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  .social_list {
+    display: flex;
+    li {
+      padding-right: 8px;
+      a {
+        display: block;
+        margin-right: 8px;
+        &:hover {
+          opacity: 0.7;
+        }
+        img {
+          width: 32px;
+        }
+      }
+    }
+  }
+  .copy_right {
+    margin: 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3F5D45;
+  }
+}
+
+@include rwd-mobile(sm) {
+  .mail_block {
+    flex-direction: column;
+    > div:nth-child(1) {
+      margin-bottom: 30px;
+    }
+    > div:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  .contact_info {
+    .contact_box {
+      > div {
+        margin-bottom: 40px;
+      }
+    }
+    .img_slogan {
+      display: none;
+    }
+  }
+
+  .social_info {
+    align-items: flex-start;
+    flex-direction: column;
+    .copy_right {
+      padding-top: 23px;
+    }
+  }
+}

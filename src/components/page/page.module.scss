@@ -1,0 +1,112 @@
+@import '../../assets/css/variable';
+@import '../../assets/css/mixin';
+
+.prod_box {
+  .prod_img {
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+    &:hover {
+      > img {
+        transform: scale(1.2, 1.2);
+        z-index: 1;
+      }
+    }
+    .type {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      display: block;
+      writing-mode: vertical-lr;
+      padding: 10px;
+      background-color: #3F5D45;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 5px;
+      color: #EAF0ED;
+      z-index: 2;
+    }
+    .favorite {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      z-index: 2;
+      i {
+        font-size: 20px;
+        color: #E40001;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .prod_info {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #EAF0ED;
+    border-right: 1px solid #EAF0ED;
+    > div {
+      text-align: center;
+      &:nth-child(1) {
+        flex: 0 0 60%;
+      }
+      &:nth-child(2) {
+        flex: 0 0 40%;
+      }
+    }
+    h5 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 24px;
+      color: #3F5D45;
+      padding: 13px 0;
+      border-right: 1px solid #EAF0ED;
+    }
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: #3F5D45;
+      padding: 13px 0;
+    }
+  }
+}
+
+.info_box {
+  border: 1px solid #EAF0ED;
+  .info_title {
+    text-align: center;
+    padding: 16px 0;
+    background-color: #EAF0ED;
+    h3 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 24px;
+      color: #8DA291;
+    }
+  }
+}
+
+.info_box_dark {
+  border: none;
+  background-color: #3F5D45;
+  .info_title {
+    text-align: center;
+    padding: 16px 0;
+    margin: 0 20px;
+    background-color: #3F5D45;
+    border-bottom: 1px solid #EAF0ED;
+    h3 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 24px;
+      color: #EAF0ED;
+    }
+  }
+}

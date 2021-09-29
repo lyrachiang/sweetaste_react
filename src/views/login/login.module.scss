@@ -1,0 +1,73 @@
+@import '../../assets/css/variable';
+@import '../../assets/css/mixin';
+
+.content_container {
+  padding-top: 160px;
+  padding-bottom: 60px;
+  > div {
+    max-width: 860px;
+  }
+}
+
+.login_container {
+  display: flex;
+  > div {
+    flex: 0 0 50%;
+  }
+}
+
+.login_box {
+  background-color: #3F5D45;
+  h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    color: #EAF0ED;
+    padding: 40px 0;
+    text-align: center;
+  }
+}
+
+.login_img {
+  margin: 20px 0;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-bottom: 90%;
+    background-image: url('../../assets/imgs/prod/img_prod_13.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.login_form {
+  > div:nth-child(1) {
+    padding: 0 30px;
+  }
+}
+
+@include rwd-mobile(sm) {
+  .content_container {
+    padding-top: 96px;
+    padding-bottom: 30px;
+  }
+
+  .login_container {
+    flex-direction: column;
+    > div {
+      flex: 0 0 100%;
+    }
+  }
+
+  .login_box {
+    order: 2;
+  }
+  
+  .login_img {
+    order: 1;
+    margin: 0;
+  }
+}

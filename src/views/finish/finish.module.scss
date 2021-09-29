@@ -1,0 +1,62 @@
+@import '../../assets/css/variable';
+@import '../../assets/css/mixin';
+
+.finish_banner {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.finish_box {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.finish_icon {
+  padding-bottom: 32px;
+  i {
+    position: relative;
+    color: #3F5D45;
+    padding-right: 66px;
+    &:after {
+      display: block;
+      content: '';
+      width: 66px;
+      height: 1px;
+      background-color: #3F5D45;
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+    &:last-child {
+      padding-right: 0;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.finish_img {
+  padding-bottom: 51px;
+  > img {
+    width: 189px;
+  }
+}
+
+@include rwd-mobile(sm) {
+  .finish_banner {
+    margin-bottom: 0;
+    padding-bottom: 80%;
+    background-size: cover;
+  }
+}
+
+@include rwd-mobile(ss) {
+  .finish_banner {
+    padding-bottom: 138%;
+  }
+}

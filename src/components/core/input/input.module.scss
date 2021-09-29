@@ -1,0 +1,67 @@
+@import '../../../assets/css/variable';
+@import '../../../assets/css/mixin';
+
+.input_block {
+  display: flex;
+  align-items: center;
+  background-color: #EAF0ED;
+  input {
+    flex: 1 1 auto;
+    width: 1%;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    color: #3F5D45;
+    background-color: #EAF0ED;
+    padding: 18px 10px;
+    &:focus-visible  {
+      outline: none;
+    }
+    
+  }
+}
+
+.input_prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 10px;
+  color: #3F5D45;
+}
+
+.input_suffix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 20px;
+  color: #3F5D45;
+}
+
+.input_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 56px;
+  border: none;
+  background-color: #FFE180;
+  color: #3F5D45;
+  cursor: pointer;
+  &:hover {
+    background-color: darken(#FFE180, 10);
+  }
+}
+
+::placeholder {
+  color: #8DA291;
+}
+
+:-ms-input-placeholder {
+  color: #8DA291;
+}
+
+::-ms-input-placeholder {
+  color: #8DA291;
+}

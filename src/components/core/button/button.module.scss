@@ -1,0 +1,44 @@
+@import '../../../assets/css/variable';
+@import '../../../assets/css/mixin';
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 16px;
+  background-color: transparent;
+  border-color: transparent;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.btn_icon {
+  padding: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn_primary {
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  &:hover {
+    color: #FFFFFF;
+    background-color: #3F5D45;
+  }
+}
+
+.btn_secondary {
+  color: #3F5D45;
+  background-color: #FFE180;
+  &:hover {
+    color: lighten(#3F5D45, 10%);
+    background-color: darken(#FFE180, 5%);;
+  }
+}
+
+.block {
+  display: block;
+  width: 100%;
+}

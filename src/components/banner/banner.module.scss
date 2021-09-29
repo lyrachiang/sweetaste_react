@@ -1,0 +1,41 @@
+@import '../../assets/css/variable';
+@import '../../assets/css/mixin';
+
+.banner_container {
+  padding-top: 100px;
+}
+
+.banner, .banner_index {
+  width: 100%;
+  padding-bottom: 53%;
+  background-image: url('../../assets/imgs/banner_1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner_product {
+  background-image: url('../../assets/imgs/banner_2.jpg');
+}
+
+.banner_finish {
+  background-image: url('../../assets/imgs/banner_3.jpg');
+}
+
+.banner_favorite {
+  background-image: url('../../assets/imgs/banner_4.jpg');
+}
+
+@include rwd-mobile(sm) {
+  .banner_container {
+    padding-top: 84px;
+    > div {
+      padding: 0;
+    }
+  }
+
+  .banner {
+    padding-bottom: 74%;
+  }
+}
