@@ -84,7 +84,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li onClick={atMenuClick}>
-                <NavLink to="/product" exact activeClassName={cx('active')}>
+                <NavLink to="/product" activeClassName={cx('active')}>
                   <span>甜點</span>
                 </NavLink>
               </li>

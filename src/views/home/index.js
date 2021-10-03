@@ -9,9 +9,10 @@ import { ProdItem } from '../../components/page';
 import styles from './home.module.scss';
 
 import { fetchProd, fetchProdType, getProd } from '../../store/slice/prod';
+import { getOrder } from '../../store/slice/order';
 import { getFavorite } from '../../store/slice/favorite';
 
-import { tabData, articleData } from './data';
+import { articleData } from './data';
 
 const cx = classNames.bind(styles);
 
@@ -82,7 +83,6 @@ const ArticleItem = (props) => {
 
 const Home = () => {
   const dispatch = useDispatch();
-  const [currentTab, setCurrentTab] = useState('T01');
 
   let history = useHistory();
 
@@ -92,10 +92,11 @@ const Home = () => {
   }, []);
 
   const { prodList, prodTypeList } = useSelector(getProd);
+  const { cartList } = useSelector(getOrder);
   const { favoriteList } = useSelector(getFavorite);
 
   const filterProd = Object.values(prodList).filter((item) => {
-    return item.typeId === currentTab;
+    return item.typeId === 'T01';
   });
 
   return (
@@ -103,11 +104,10 @@ const Home = () => {
       <Banner type="index" />
       <div className={cx('tab_container')}>
         <Tab
-          dataSource={tabData}
-          activeTab={currentTab}
+          dataSource={Object.values(prodTypeList)}
+          activeTab='T01'
           onChange={(typeId, typeName) => {
-            setCurrentTab(() => typeId);
-            history.push(`#${typeName}`);
+            history.push(`/product/${typeName}`);
           }}
         />
       </div>
@@ -145,6 +145,7 @@ const Home = () => {
 
                 const prodTypeData = prodTypeList[typeId];
                 const isFav = favoriteList.filter((item) => item.id === id).length > 0 || false;
+                const isAddCart = cartList.filter((item) => item.id === id).length > 0;
 
                 return (
                   <div key={id}>
@@ -156,6 +157,7 @@ const Home = () => {
                         name={name}
                         price={price}
                         isFav={isFav}
+                        isAddCart={isAddCart}
                       />
                     </div>
                   </div>

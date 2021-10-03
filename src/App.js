@@ -16,7 +16,8 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Layout>
         <Route path="/" exact component={Home} />
-        <Route path="/product" component={Product} />
+        <Route path="/product" exact component={Product} />
+        <Route path="/product/:prodType" component={Product} />
         <Route path="/favorite" component={Favorite} />
         <Route path="/login" component={Login} />
         <Route path="/cart" component={Cart} />

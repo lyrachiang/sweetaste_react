@@ -52,7 +52,10 @@ const ProdItem = (props) => {
     name,
     price,
     isFav,
+    isAddCart,
   } = props;
+
+  const [active, setActive] = useState(isAddCart);
 
   const dispatch = useDispatch();
 
@@ -77,7 +80,17 @@ const ProdItem = (props) => {
           <p>NT$ {price}</p>
         </div>
       </div>
-      <Button type="primary" block onClick={() => atClick(id)}>加入購物車</Button>
+      <Button
+        type="primary"
+        block
+        disabled={active}
+        onClick={() => {
+          atClick(id);
+          setActive(() => true);
+        }}
+      >
+        { active ? '已加入購物車' : '加入購物車'}
+      </Button>
     </div>
   );
 };

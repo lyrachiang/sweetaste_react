@@ -34,11 +34,21 @@
   background-color: #FFE180;
   &:hover {
     color: lighten(#3F5D45, 10%);
-    background-color: darken(#FFE180, 5%);;
+    background-color: darken(#FFE180, 5%);
   }
 }
 
 .block {
   display: block;
   width: 100%;
+}
+
+.disabled {
+  color: #00000040;
+  background-color: #F5F5F5;
+  cursor: not-allowed;
+  &:hover {
+    color: #00000040;
+    background-color: #F5F5F5;
+  }
 }

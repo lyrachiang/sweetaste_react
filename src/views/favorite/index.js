@@ -10,6 +10,7 @@ import { InfoBox, ProdItem } from '../../components/page';
 import styles from './favorite.module.scss';
 
 import { fetchProd, fetchProdType, getProd } from '../../store/slice/prod';
+import { getOrder } from '../../store/slice/order';
 import { getUser } from '../../store/slice/user';
 import { getFavorite } from '../../store/slice/favorite';
 
@@ -25,6 +26,7 @@ const Favorite = () => {
   }, []);
   
   const { prodList, prodTypeList } = useSelector(getProd);
+  const { cartList } = useSelector(getOrder);
   const { isLogin } = useSelector(getUser);
   const { favoriteList } = useSelector(getFavorite);
 
@@ -46,6 +48,7 @@ const Favorite = () => {
         
                         if (itemData) {
                           const prodTypeData = prodTypeList[itemData.typeId] ;
+                          const isAddCart = cartList.filter((item) => item.id === id).length > 0;
         
                           return (
                             <div key={id}>
@@ -57,6 +60,7 @@ const Favorite = () => {
                                   name={itemData.name}
                                   price={itemData.price}
                                   isFav={true}
+                                  isAddCart={isAddCart}
                                 />
                               </div>
                             </div>

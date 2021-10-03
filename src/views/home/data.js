@@ -1,21 +1,3 @@
-export const tabData = [
-  {
-    id: 'T01',
-    name: '本日精選',
-    enName: 'daily',
-  },
-  {
-    id: 'T02',
-    name: '人氣推薦',
-    enName: 'recommend',
-  },
-  {
-    id: 'T03',
-    name: '新品上市',
-    enName: 'new',
-  },
-];
-
 export const articleData = [
   {
     id: '1',

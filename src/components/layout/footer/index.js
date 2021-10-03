@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FaEnvelope, FaArrowRight } from 'react-icons/fa';
 
@@ -38,8 +37,10 @@ const Footer = () => {
             <div>
               <Input
                 type="email"
+                value="sweetaste@email.com"
                 prefix={<FaEnvelope />}
                 enterButton={<FaArrowRight />}
+                readOnly
                 buttonHref="mailto:sweetaste@email.com"
               />
             </div>
@@ -77,9 +78,9 @@ const Footer = () => {
                   
                   return (
                     <li key={title}>
-                      <Link to={link} target="_blank">
+                      <a href={link} target="_blank" rel="noreferrer">
                         <img src={require(`../../../assets/imgs/icons/${img}.svg`).default} alt={title} />
-                      </Link>
+                      </a>
                     </li>
                   );
                 })

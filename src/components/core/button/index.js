@@ -10,6 +10,7 @@ const Button = (props) => {
     type,
     href,
     block,
+    disabled,
     children,
     className,
     onClick,
@@ -18,6 +19,7 @@ const Button = (props) => {
   const btnClass = {
     [`btn_${type}`]: type,
     block: block,
+    disabled: disabled,
     [className]: className,
   };
 

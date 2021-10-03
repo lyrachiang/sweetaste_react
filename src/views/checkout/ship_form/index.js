@@ -129,7 +129,7 @@ const ShipForm = (props) => {
                   <InputNumber
                     {...field}
                     format="####-###-###"
-                    placeholder="09xx-xxx-xxx"
+                    placeholder=""
                     iconErr={<FaExclamationCircle />}
                   />
                 );

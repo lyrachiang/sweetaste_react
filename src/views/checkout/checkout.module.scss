@@ -75,8 +75,6 @@
 
 .cart_box {
   padding: 8px 20px;
-  max-height: 303px;
-  overflow-y: scroll;
 }
 
 .prod_box {
@@ -163,9 +161,5 @@
         width: 50px;
       }
     }
-  }
-
-  .cart_box {
-    max-height: 320px;
   }
 }
