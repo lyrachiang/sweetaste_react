@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sweetaste_react/static/css/main.7c5328a1.chunk.css",
+    "main.css": "/sweetaste_react/static/css/main.1188a042.chunk.css",
     "main.js": "/sweetaste_react/static/js/main.2cbcd5c3.chunk.js",
     "main.js.map": "/sweetaste_react/static/js/main.2cbcd5c3.chunk.js.map",
     "runtime-main.js": "/sweetaste_react/static/js/runtime-main.9137214f.js",
@@ -8,7 +8,7 @@
     "static/js/2.92ce3c56.chunk.js": "/sweetaste_react/static/js/2.92ce3c56.chunk.js",
     "static/js/2.92ce3c56.chunk.js.map": "/sweetaste_react/static/js/2.92ce3c56.chunk.js.map",
     "index.html": "/sweetaste_react/index.html",
-    "static/css/main.7c5328a1.chunk.css.map": "/sweetaste_react/static/css/main.7c5328a1.chunk.css.map",
+    "static/css/main.1188a042.chunk.css.map": "/sweetaste_react/static/css/main.1188a042.chunk.css.map",
     "static/js/2.92ce3c56.chunk.js.LICENSE.txt": "/sweetaste_react/static/js/2.92ce3c56.chunk.js.LICENSE.txt",
     "static/media/banner_1.jpg": "/sweetaste_react/static/media/banner_1.a2b867f5.jpg",
     "static/media/banner_2.jpg": "/sweetaste_react/static/media/banner_2.8126439b.jpg",
@@ -57,7 +57,7 @@
   "entrypoints": [
     "static/js/runtime-main.9137214f.js",
     "static/js/2.92ce3c56.chunk.js",
-    "static/css/main.7c5328a1.chunk.css",
+    "static/css/main.1188a042.chunk.css",
     "static/js/main.2cbcd5c3.chunk.js"
   ]
 }
